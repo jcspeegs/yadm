@@ -11,7 +11,7 @@ set -o vi
 PS1='[\u@\h \W]\$ '
 
 alias ls='ls --color=auto'
-alias ll='ls -l --color=auto'
+alias ll='ls -lrt --color=auto'
 alias msfconsole="/opt/metasploit/msfconsole --quiet -x \"db_connect ${USER}@msf\""
 
 alias R='R --quiet'
