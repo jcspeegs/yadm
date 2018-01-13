@@ -32,7 +32,7 @@ floating_modifier $mod
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 # bindsym $mod+Return exec gnome-terminal
-bindsym $mod+Return exec xfce4-terminal -e tmux
+bindsym $mod+Return exec xfce4-terminal --hide-menubar -e tmux 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -125,7 +125,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -171,13 +171,15 @@ bindsym $mod+Control+w exec chromium
 # -File explorer
 bindsym $mod+Control+f exec nautilus
 # -Lock screen
-bindsym $mod+Control+l exec i3lock --image=/home/ugflows/Pictures/variety_wallpaper.png
+bindsym $mod+Control+l exec i3lock -ef --image=/home/ugflows/Pictures/variety_wallpaper.png
 
 # Focus not follow mouse
 focus_follows_mouse no
 
 # Set wallpaper
-output eDP-1 bg ~/Pictures/variety_wallpaper.jpg stretch
+output * bg ~/Pictures/variety_wallpaper.jpg fit
+# The stretch arguement below can cause a crash upon config reload if sway is started via gdm
+#output eDP-1 bg ~/Pictures/variety_wallpaper.jpg stretch
 
 # Set HiDPI scaling
 output eDP-1 res 3200x1800

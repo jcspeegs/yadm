@@ -12,6 +12,7 @@ PS1='[\u@\h \W]\$ '
 
 alias ls='ls --color=auto'
 alias ll='ls -lrt --color=auto'
+alias cfg='vim ~/.config/sway/config'
 alias msfconsole="/opt/metasploit/msfconsole --quiet -x \"db_connect ${USER}@msf\""
 
 alias R='R --quiet'
