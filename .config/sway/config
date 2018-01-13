@@ -177,7 +177,7 @@ bindsym $mod+Control+l exec i3lock -ef --image=/home/ugflows/Pictures/variety_wa
 focus_follows_mouse no
 
 # Set wallpaper
-output * bg ~/Pictures/variety_wallpaper.jpg fit
+output * bg ~/Pictures/variety_wallpaper.jpg center
 # The stretch arguement below can cause a crash upon config reload if sway is started via gdm
 #output eDP-1 bg ~/Pictures/variety_wallpaper.jpg stretch
 
