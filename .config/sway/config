@@ -219,9 +219,9 @@ bindsym $mod+r mode "resize"
 bar {
        status_command i3status
        position top
-       font UbuntuMono 16
+       font pango:UbuntuMono, FontAwesome5Free, FontAwesome5Brands 20
        colors {
-               background #000000BF
+               background #000000B3
                #focused_workspace #487878 #487878 #FFFFFF
        }
 }
@@ -232,8 +232,7 @@ bindsym $mod+Control+w exec chromium
 # -File explorer
 bindsym $mod+Control+f exec nautilus
 # -Lock screen
-bindsym $mod+Control+l exec i3lock -ef --image=/home/ugflows/Pictures/        variety_wallpaper.png
-
+bindsym $mod+Control+l exec i3lock -ef --image=/home/ugflows/Pictures/variety_wallpaper.png 
 # Focus not follow mouse
 focus_follows_mouse no
 
